@@ -10,7 +10,7 @@ Requirements:
   <li>MongoDB driver for Go (go get go.mongodb.org/mongo-driver/mongo)</li>
 </ul>
 
-<br>Clone these repository, and install Socket.IO module and MongoDB driver in local Go's $GOPATH
+<br>Clone this repository, then install Socket.IO module and MongoDB driver in local Go's $GOPATH
 <br>From source directory execute: go run main.go
 <br>Open a web-browser on localhost:3000
 
