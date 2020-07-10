@@ -33,7 +33,7 @@ Requirements:
   <li>https://es.vuejs.org/v2/guide/</li>
   <li>https://tutorialedge.net/golang/golang-websockets-tutorial/</li>
   <li>https://steemit.com/utopian-io/@upmeboost/nodejs--socketio--creating-a-login-system-nvlrmaoy</li>
-  <li></li>
+  <li>https://codepen.io/AndrewThian/pen/QdeOVa</li>
 </ul>
 
   
