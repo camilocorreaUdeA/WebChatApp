@@ -11,6 +11,7 @@ Requirements:
 </ul>
 
 <br>Clone this repository, then install Socket.IO module and MongoDB driver in local Go's $GOPATH
+<br>Start MongoDB: sudo systemctl start mongod
 <br>From source directory execute: go run main.go
 <br>Open a web-browser on localhost:3000
 
