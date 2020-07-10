@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<title>WebChat App CondorLabs</title>
+
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<h1 class="text-center"><a href="#">WebChat App CondorLabs</a></h1>
+
+<div class="container" id=app> 
+    <div v-if="!joined" id="join" class="text-center">
+        <form>
+          <div class="form-group">
+              <input type="text" max="12" class="form-control input-lg text-center" v-model="username" placeholder="Username">
+          </div>
+          <div class="form-group">
+              <input type="password" max="12" class="form-control input-lg text-center"  v-model="password" placeholder="Password">
+          </div>
+          <button @click.prevent="" class="btn btn-primary btn-lg" @click="login()">Login</button>
+          <button @click.prevent="" class="btn btn-primary btn-lg" @click="signin()">Sign In</button>
+        </form>
+      </div>
+
+    <div v-if="joined" id="group">
+        <div class="signout">
+            <input name="submit2" type="submit" id="submit2" @click="leave()" value="Leave chat">
+        </div>
+
+        <div class="search-wrapper">
+            <h4>Users</h4>
+            <input type="text" v-model="search" placeholder="Search user"/>
+            <label>Search user</label>
+        </div>
+        <div class="wrapper">
+            <div class="card" v-for="user in filteredList">
+                <ul class="list-unstyled">
+                    <li>
+                        <span><button @click="privatemsg(user.username)">{{user.username}}</button></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+           
+
+        <div class="chat" id="chat">
+            <div class="messages">
+                <ul class="list-unstyled">
+                    <li v-for="m in messages" :class="{me: m.user === user, clearfix: true}">
+                        <div class="name">{{m.user}}</div>
+                        <span>{{m.text}} - {{m.date}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="input">
+                <form @submit.prevent="sendMessage()">
+                        <div class="input-group">
+                            <input type="text" class="form-control" v-model="message" placeholder="Type here">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">Send</button>
+                            </span>
+                        </div>
+                </form>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<!-- VueJs -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<!-- Socket.io -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+<!--CUSTOM JS -->
+<script src="main.js"></script>
+</body>
+</html>
