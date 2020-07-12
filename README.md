@@ -23,6 +23,15 @@ Requirements:
   <li>HTML and CSS</li>
 </ul>
 
+<br>Features:
+<ul>
+  <li>Single multi-user chat room</li>
+  <li>List of connected users</li>
+  <li>Search user box</li>
+  <li>Private messaging (Click on receiver's name in users list to send a private message. Click on self user name to return to public messaging)</li>
+  <li>Login and SignIn</li>
+</ul>
+
 <br>External code sources:
 <ul>
   <li>https://www.mongodb.com/blog/post/mongodb-go-driver-tutorial</li>
